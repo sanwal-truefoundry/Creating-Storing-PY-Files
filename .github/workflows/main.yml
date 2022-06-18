@@ -23,3 +23,18 @@ jobs:
 
       - name: Moving build to artifacts directory
         run: sh ./generate-docs.sh
+
+      - name: Moving into another repo
+        with:
+          repository: sanwal-truefoundry/MLFoundry-Clone
+          ref: 'main'
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: tmp_ahc
+        
+      - name: Commit new file
+        run: |
+          cd tmp_ahc
+          git config user.name github-action
+          git add docs/api-docs/mlfoundry_api.py.md
+          git commit -m "[CI] Commit new file mlfoundry_api.py.md"
+          git push
