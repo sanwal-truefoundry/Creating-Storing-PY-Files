@@ -25,6 +25,7 @@ jobs:
         run: sh ./generate-docs.sh
 
       - name: Moving into another repo
+        uses: actions/checkout@v2
         with:
           repository: sanwal-truefoundry/MLFoundry-Clone
           ref: 'main'
