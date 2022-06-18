@@ -18,8 +18,5 @@ jobs:
       - name: Install packages
         run: npm install
 
-      - name: Run build
-        run: npm run build
-
       - name: Moving build to artifacts directory
         run: sh ./generate-docs.sh
