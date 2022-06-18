@@ -29,7 +29,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_file: './docs/api-docs/mlfoundry.py.md'
+          source_file: 'docs/api-docs/mlfoundry_api.py.md'
           destination_repo: 'sanwal-truefoundry/MLFoundry-Clone'
           user_email: 'sanwal@truefoundry.com'
           user_name: 'sanwal-truefoundry'
