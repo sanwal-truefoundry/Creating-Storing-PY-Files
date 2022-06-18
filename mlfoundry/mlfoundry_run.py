@@ -7,17 +7,6 @@ def check(n):
 			return False
 	return True
 n = 23
-
-    """This is my example docstring
-
-        A simple bullet list:
-
-        - point 1
-        - point 2
-        - point 3
-
-    """
-
 if check(n):
 	print("prime")
 else:
