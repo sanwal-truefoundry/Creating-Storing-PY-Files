@@ -29,7 +29,6 @@ jobs:
         with:
           repository: sanwal-truefoundry/MLFoundry-Clone
           ref: 'main'
-          token: ${{ secrets.TOKEN }}
           path: tmp_ahc
         
       - name: Commit new file
