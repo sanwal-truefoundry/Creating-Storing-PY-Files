@@ -27,11 +27,10 @@ jobs:
       - name: Pushes File
         uses: dmnemec/copy_file_to_another_repo_action@main
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          API_TOKEN_GITHUB: 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
         with:
           source_file: './docs/api-docs/mlfoundry.py.md'
           destination_repo: 'sanwal-truefoundry/MLFoundry-Clone'
-          destination_folder: './'
           user_email: 'sanwal@truefoundry.com'
           user_name: 'sanwal@truefoundry'
           commit_message: 'Commiting the .md file' 
