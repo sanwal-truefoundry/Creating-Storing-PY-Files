@@ -24,6 +24,15 @@ jobs:
       - name: Moving build to artifacts directory
         run: sh ./generate-docs.sh
 
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@main
+        with:
+          source-directory: 'docs'
+          destination-github-username: 'sanwal-truefoundry'
+          destination-repository-name: 'MlFoundry-Clone'
+          user-email: sanwal@truefoundry.com
+          target-branch: main 
+
       - name: Moving into another repo
         uses: actions/checkout@v2
         with:
@@ -37,4 +46,4 @@ jobs:
           git config user.name github-action
           git add docs/api-docs/mlfoundry_api.py.md
           git commit -m "[CI] Commit new file mlfoundry_api.py.md"
-          git push
+          git push  
