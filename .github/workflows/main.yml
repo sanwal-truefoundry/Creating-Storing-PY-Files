@@ -23,3 +23,14 @@ jobs:
 
       - name: Moving build to artifacts directory
         run: sh ./generate-docs.sh
+
+      - name: Pushes File
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_file: 'docs/api-docs/mlfoundry_api.py.md'
+          destination_repo: 'sanwal-truefoundry/MLFoundry-Clone'
+          user_email: 'sanwal@truefoundry.com'
+          user_name: 'sanwal-truefoundry'
+          commit_message: 'Commiting the .md file' 

@@ -1,4 +1,2 @@
-lazydocs \
-    --overview-file="README.md" \
-    --src-base-url="https://github.com/sanwal-truefoundry/Creating-Storing-PY-Files/script-run/" \
-    ./mlfoundry/mlfoundry_api.py
+lazydocs --output-path stdout ./mlfoundry/mlfoundry_api.py
+lazydocs --output-path sanwal-truefoundry/Creating-Storing-PY-Files/tree/script-run/docs/api-docs/mlfoundry_api.py.md ./mlfoundry/mlfoundry_api.py
