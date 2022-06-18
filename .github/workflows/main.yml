@@ -32,5 +32,5 @@ jobs:
           source_file: './docs/api-docs/mlfoundry.py.md'
           destination_repo: 'sanwal-truefoundry/MLFoundry-Clone'
           user_email: 'sanwal@truefoundry.com'
-          user_name: 'sanwal@truefoundry'
+          user_name: 'sanwal-truefoundry'
           commit_message: 'Commiting the .md file' 
