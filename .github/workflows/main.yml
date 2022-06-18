@@ -18,5 +18,8 @@ jobs:
       - name: Install packages
         run: npm install
 
+      - name: Install Lazydocs
+        run: pip install lazydocs
+
       - name: Moving build to artifacts directory
         run: sh ./generate-docs.sh
