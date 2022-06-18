@@ -3,6 +3,7 @@ on:
   push:
       branches:
         - main
+        - script-run
 
 jobs:
   build_container:
