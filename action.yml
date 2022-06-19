@@ -1,0 +1,22 @@
+name: 'Action for MLFoundry'
+description: 'Running shell script and storing files in another repo'
+inputs:
+  source-directory:
+    description: 'Source directory from another repo'
+    required: true
+  destination-github-username:
+    description: 'GitHub username for the commit'
+    required: true
+  destination-repository-name:
+    description: 'Destination repository'
+    required: true
+  user-email:
+    description: 'Email for the git commit'
+    required: true
+  target-branch:
+    description: 'branch to push file to, defaults to main'
+    required: false
+
+runs:
+  using: 'node16'
+  main: 'main.yml'
