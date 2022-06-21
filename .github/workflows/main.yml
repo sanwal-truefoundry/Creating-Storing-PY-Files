@@ -12,18 +12,13 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Set Node.js version 
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+        uses: actions/checkout@v3
 
       - name: Install packages
         run: npm install
 
       - name: Install Lazydocs
-        run: pip install lazydocs
+        run: pip install "lazydocs>=0.4.8,<1.0.0"
 
       - name: Moving build to artifacts directory
         run: sh ./generate-docs.sh
