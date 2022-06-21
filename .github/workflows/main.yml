@@ -14,9 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install packages
-        run: npm install
-
       - name: Install Lazydocs
         run: pip install "lazydocs>=0.4.8,<1.0.0"
 
