@@ -1,0 +1,16 @@
+name: Generate Documentation
+
+on: 
+  push:
+      branches:
+        - main
+        - script-run
+
+jobs: # update the docs.
+  update-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wandb/docugen@v0.2.0
+        with:
+          gitbook-branch: en
+          access-token: ${{ secrets.SSH_DEPLOY_KEY }}
