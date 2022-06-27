@@ -27,6 +27,6 @@ jobs:
         with:
           source-directory: 'docs'
           destination-github-username: 'sanwal-truefoundry'
-          destination-repository-name: 'Testing-.md-collaboration'
+          destination-repository-name: 'MLFoundry-Clone'
           user-email: sanwal@truefoundry.com
-          target-branch: updating-md
+          target-branch: main
