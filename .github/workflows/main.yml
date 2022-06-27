@@ -20,13 +20,18 @@ jobs:
       - name: Moving build to artifacts directory
         run: sh ./generate-docs.sh
 
-      - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      - name: Checkout helm-charts
+        uses: actions/checkout@v2
         with:
-          source-directory: 'docs'
-          destination-github-username: 'sanwal-truefoundry'
-          destination-repository-name: 'MLFoundry-Clone'
-          user-email: sanwal@truefoundry.com
-          target-branch: main
+          repository: sanwal-truefoundry/MLFoundry-Clone
+          ref: 'main'
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+          path: tmp_ahc
+      
+      - name: Pushing file
+        run: |
+          cd tmp_ahc
+          git config user.name github-action
+          git add docs
+          git commit -m "[CI] Update .md files"
+          git push
