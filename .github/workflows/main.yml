@@ -16,10 +16,7 @@ jobs:
 
       - name: Install Lazydocs
         run: pip install "lazydocs>=0.4.8,<1.0.0"
-
-      - name: Moving build to artifacts directory
-        run: sh ./generate-docs.sh
-
+      
       - name: Checkout helm-charts
         uses: actions/checkout@v2
         with:
@@ -27,6 +24,9 @@ jobs:
           ref: 'main'
           token: ${{ secrets.API_TOKEN_GITHUB }}
           path: tmp_ahc
+
+      - name: Moving build to artifacts directory
+        run: sh ./generate-docs.sh
       
       - name: Pushing file
         run: |
