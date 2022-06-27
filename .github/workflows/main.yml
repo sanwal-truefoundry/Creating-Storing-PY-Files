@@ -20,7 +20,7 @@ jobs:
       - name: Checkout helm-charts
         uses: actions/checkout@v2
         with:
-          repository: sanwal-truefoundry/Testing-.md-collaboration
+          repository: sanwal-truefoundry/MLFoundry-Clone
           ref: 'main'
           token: ${{ secrets.API_TOKEN_GITHUB }}
           path: tmp_ahc
