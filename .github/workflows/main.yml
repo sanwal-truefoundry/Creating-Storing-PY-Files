@@ -22,7 +22,7 @@ jobs:
         with:
           repository: sanwal-truefoundry/Testing-.md-collaboration
           ref: 'main'
-          token: ${{ secrets.TF_GITHUB_CI_ADMIN_TOKEN }}
+          token: ${{ secrets.API_TOKEN_GITHUB }}
           path: tmp_ahc
 
       - name: Moving build to artifacts directory
