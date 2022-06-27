@@ -20,9 +20,9 @@ jobs:
       - name: Checkout helm-charts
         uses: actions/checkout@v2
         with:
-          repository: sanwal-truefoundry/MLFoundry-Clone
+          repository: sanwal-truefoundry/Testing-.md-collaboration
           ref: 'main'
-          token: ${{ secrets.API_TOKEN_GITHUB }}
+          token: ${{ secrets.TF_GITHUB_CI_ADMIN_TOKEN }}
           path: tmp_ahc
 
       - name: Moving build to artifacts directory
