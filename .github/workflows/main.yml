@@ -32,6 +32,6 @@ jobs:
         run: |
           cd tmp_ahc
           git config user.name github-action
-          git add docs
+          git add .
           git commit -m "[CI] Update .md files"
           git push
