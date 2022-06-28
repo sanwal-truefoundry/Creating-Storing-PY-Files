@@ -23,14 +23,14 @@ jobs:
           repository: sanwal-truefoundry/Testing-.md-collaboration
           ref: 'updating-md'
           token: ${{ secrets.API_TOKEN_GITHUB }}
-          path: tmp_ahc
+          path: docs
 
       - name: Moving build to artifacts directory
         run: sh ./generate-docs.sh
       
       - name: Pushing file
         run: |
-          cd tmp_ahc
+          cd docs
           git config user.name github-action
           git add .
           git commit -m "[CI] Update .md files"
