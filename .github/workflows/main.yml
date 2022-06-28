@@ -43,7 +43,7 @@ jobs:
           path: docs
 
       - name: Moving build to artifacts directory
-        run: sh ./generate-docs.sh
+        run: poetry run sh ./generate-docs.sh
       
       - name: Pushing file
         run: |
